@@ -8,7 +8,7 @@
                 <div class="panel-heading">Biblioteka</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    Jesteś zalogowany
                 </div>
             </div>
         </div>
