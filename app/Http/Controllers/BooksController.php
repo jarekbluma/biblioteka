@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
-class UsersController extends Controller
+
+class BooksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,9 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+       // $user = User::FindOrFail($id);compact('user')
+
+        return View('dodawanie.addbook');
     }
 
     /**
@@ -46,6 +50,7 @@ class UsersController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
