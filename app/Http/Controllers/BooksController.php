@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class BooksController extends Controller
@@ -15,8 +16,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-       // $user = User::FindOrFail($id);compact('user')
-
+        //$user = Auth::user();  , compact('user')
         return View('dodawanie.addbook');
     }
 
@@ -27,7 +27,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return 'cos'; 
     }
 
     /**
@@ -38,7 +38,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'cos3';
     }
 
     /**
@@ -49,7 +49,7 @@ class BooksController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'cos1';
 
     }
 
@@ -61,7 +61,7 @@ class BooksController extends Controller
      */
     public function edit($id)
     {
-        //
+       return 'cos2';
     }
 
     /**
@@ -73,7 +73,8 @@ class BooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return 'cos';
+    
     }
 
     /**
