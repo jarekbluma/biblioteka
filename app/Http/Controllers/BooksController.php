@@ -5,10 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use App\Book;
 
 
 class BooksController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +47,20 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        return 'cos3';
+       //$this -> validate($request, [
+       //     'post_content' => 'required|min:1',
+       // ], [
+       //         'required' => 'Pole nie może być puste!'
+       // ]);
+
+        Book::create([
+            'autor' => $request -> autor,
+            'tytul' => $request -> tytul,
+            'wydawnictwo' => $request -> wydawnictwo,
+            'rok' => $request -> rok,
+        ]);
+
+        return back();
     }
 
     /**

@@ -11,45 +11,35 @@
                         {{ csrf_field() }}
                         
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Tytuł</label>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Tytuł</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                <input id="tytul" type="text" class="form-control" name="tytul" required>
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Autor</label>
+                       <div class="form-group">
+                            <label class="col-md-4 control-label">Autor</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Wydawnictwo</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                
+                                <input id="autor" type="text" class="form-control" name="autor">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Rok</label>
+                            <label class="col-md-4 control-label">Wydawnictwo</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="wydawnictwo" type="text" class="form-control" name="wydawnictwo">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label  class="col-md-4 control-label">Rok</label>
+
+                            <div class="col-md-6">
+                                <input id="rok" type="text" class="form-control" name="rok">
                             </div>
                         </div>
 
