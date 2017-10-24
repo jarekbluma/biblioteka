@@ -47,11 +47,11 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-       //$this -> validate($request, [
-       //     'post_content' => 'required|min:1',
-       // ], [
-       //         'required' => 'Pole nie może być puste!'
-       // ]);
+       $this -> validate($request, [
+           'tytul' => 'required|min:1',
+       ], [
+           'required' => 'Pole nie może być puste!'
+       ]);
 
         Book::create([
             'autor' => $request -> autor,
