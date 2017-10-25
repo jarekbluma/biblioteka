@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use Illuminate\Support\Facades\Auth;
-use App\Book;
+use App\borrower;
 
-
-class BooksController extends Controller
+class BorrowersController extends Controller
 {
     
     public function __construct()
@@ -25,13 +22,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //$books = Book::findOrFail($id);
-        //return view('books.index', compact('books'));
-
-
-
-        //$user = Auth::user();  , compact('user')
-        return View('dodawanie.addbook');
+        return View('dodawanie.borrowers');
     }
 
     /**
@@ -41,7 +32,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        return 'cos'; 
+        //
     }
 
     /**
@@ -52,17 +43,16 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-       $this -> validate($request, [
-           'tytul' => 'required|min:1',
+        $this -> validate($request, [
+           'name' => 'required|min:1',
        ], [
            'required' => 'Pole nie może być puste!'
        ]);
 
-        Book::create([
-            'autor' => $request -> autor,
-            'tytul' => $request -> tytul,
-            'wydawnictwo' => $request -> wydawnictwo,
-            'rok' => $request -> rok,
+        borrower::create([
+            'name' => $request -> name,
+            'surname' => $request -> surname,
+            
         ]);
 
         return back();
@@ -76,8 +66,7 @@ class BooksController extends Controller
      */
     public function show($id)
     {
-        return 'cos1';
-
+        //
     }
 
     /**
@@ -88,7 +77,7 @@ class BooksController extends Controller
      */
     public function edit($id)
     {
-       return 'cos2';
+        //
     }
 
     /**
@@ -100,8 +89,7 @@ class BooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return 'cos';
-    
+        //
     }
 
     /**

@@ -5,10 +5,15 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Biblioteka</div>
+                <div class="panel-heading">Biblioteka
+                          
+                    <a class="btn btn-primary" href="{{ url('/books') }}">Dodaj książkę do biblioteki</a>
+                    <a class="btn btn-primary" href="{{ url('/borrowers') }}">Dodaj wypożyczającego</a>
+
+                </div>
 
                 <div class="panel-body">
-                    Jesteś zalogowany
+                    
                 </div>
             </div>
         </div>

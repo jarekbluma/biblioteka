@@ -19,10 +19,6 @@ class CreateBooksTable extends Migration
             $table -> string('tytul')->nullable();
             $table -> string('wydawnictwo')->nullable();
             $table -> string('rok')->nullable();
-            $table -> string('status')->nullable();
-            $table -> string('data_poz')->nullable();
-            $table -> string('termin_oddania')->nullable();
-            $table -> string('pozyczajacy')->nullable();
             $table->timestamps('created_at');
         });
     }

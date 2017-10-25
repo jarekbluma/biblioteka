@@ -5,7 +5,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dodawanie książki do bazy</div>
+                <div class="panel-heading">Dodawanie książki do bazy
+                    <a class="btn btn-primary" href="{{ url('/home') }}">Powrót</a>
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ url('/books/')}}">
                         {{ csrf_field() }}
