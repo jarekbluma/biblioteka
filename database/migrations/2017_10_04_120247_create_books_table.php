@@ -19,6 +19,8 @@ class CreateBooksTable extends Migration
             $table -> string('tytul')->nullable();
             $table -> string('wydawnictwo')->nullable();
             $table -> string('rok')->nullable();
+            $table -> date('dateofborrow') -> nullable();
+            $table -> date('dateofreturn') -> nullable();
             $table->timestamps('created_at');
         });
     }

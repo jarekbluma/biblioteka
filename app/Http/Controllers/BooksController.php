@@ -58,6 +58,7 @@ class BooksController extends Controller
             'tytul' => $request -> tytul,
             'wydawnictwo' => $request -> wydawnictwo,
             'rok' => $request -> rok,
+
         ]);
 
         return back();
@@ -83,7 +84,11 @@ class BooksController extends Controller
      */
     public function edit($id)
     {
-       return 'cos2';
+       
+       $edit = Book::FindOrFail($id);
+
+
+       return view('edit', compact('edit'));
     }
 
     /**
@@ -95,7 +100,19 @@ class BooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return 'cos';
+        $book = Book::FindOrFail($id);
+        
+        $book -> tytul = $request -> tytul;
+        $book -> autor = $request -> autor;
+        $book -> wydawnictwo = $request -> wydawnictwo;
+        $book -> rok = $request -> rok;
+        $book -> dateofborrow = $request -> dateofborrow;
+        $book -> dateofreturn = $request -> dateofreturn;
+
+       
+        $book -> save();
+      
+        return back();
     
     }
 
