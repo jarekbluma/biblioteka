@@ -15,6 +15,9 @@ class CreateTolendsTable extends Migration
     {
         Schema::create('tolends', function (Blueprint $table) {
             $table->increments('id');
+            $table -> int('borrowers_id');
+            $table -> int('book_id');
+            $table -> int('lend');
             $table->timestamps();
         });
     }

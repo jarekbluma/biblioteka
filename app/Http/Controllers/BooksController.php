@@ -25,12 +25,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //$books = Book::findOrFail($id);
-        //return view('books.index', compact('books'));
-
-
-
-        //$user = Auth::user();  , compact('user')
+       
         return View('dodawanie.addbook');
     }
 
