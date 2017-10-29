@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Book;
+use Carbon\Carbon;
 
 
 class BooksController extends Controller
@@ -107,7 +108,8 @@ class BooksController extends Controller
         $book -> wydawnictwo = $request -> wydawnictwo;
         $book -> rok = $request -> rok;
         $book -> dateofborrow = $request -> dateofborrow;
-        $book -> dateofreturn = $request -> dateofreturn;
+        $book -> dateofreturn = Carbon::now()->addMonths(1);;
+        
 
        
         $book -> save();

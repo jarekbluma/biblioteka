@@ -14,10 +14,6 @@
 
                 <div class="panel-body">
 
-
-
-
-
                      @if($books->count() === 0)
                         <h4 class="text-center">Brak wyników</h4>
                      @else
@@ -33,34 +29,30 @@
                                                 <th>Rok</th>
                                                 <th>Data wypożyczenia</th>
                                                 <th>Data oddania</th>
+                                                <th>Pożyczający</th>
                                                 <th>Edycja</th>
                                               </tr>
                                             </thead>
                                 </div>            
                                    @foreach ($books as $book) 
-                                   <div>       
-                                            <tbody>
-                                              <tr>
-                                                <td>{{ $book->tytul }}</td>
-                                                <td>{{ $book->autor }}</td>
-                                                <td>{{ $book->wydawnictwo }}</td>
-                                                <td>{{ $book->rok }}</td>
-                                                <td>{{ $book->dateofborrow }}</td>
-                                                <td>{{ $book->dateofreturn }}</td>
-                                                <td><a class="btn btn-primary" href="{{ url('/edit/' . $book->id) }}">Edytuj</a></td>
-                                              </tr>
-                                            </tbody>
-                                          
-                                    </div>      
+                                     <div>       
+                                              <tbody>
+                                                <tr>
+                                                  <td>{{ $book->tytul }}</td>
+                                                  <td>{{ $book->autor }}</td>
+                                                  <td>{{ $book->wydawnictwo }}</td>
+                                                  <td>{{ $book->rok }}</td>
+                                                  <td>{{ $book->dateofborrow }}</td>
+                                                  <td>{{ $book->dateofreturn }}</td>
+                                                  <td></td>
+                                                  <td><a class="btn btn-primary" href="{{ url('/edit/' . $book->id) }}">Edytuj</a></td>
+                                                </tr>
+                                              </tbody>                                           
+                                      </div>      
                                    @endforeach
                                    @endif
                                    </table> 
                                 </div>
-                           
-               
-                       
-
-
                 </div>
             </div>
         </div>

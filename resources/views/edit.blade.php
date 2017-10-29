@@ -58,7 +58,7 @@
                             <label  class="col-md-4 control-label">Data zwrotu</label>
 
                             <div class="col-md-6">
-                                <input id="rok" type="date" class="form-control" name="dateofreturn" value="{{ $edit -> dateofreturn }}">
+                                <input id="rok" type="date" class="form-control" name="dateofreturn" value="{{ $edit -> dateofreturn }}" readonly>
                             </div>
                         </div>
                         <div class="form-group">
