@@ -52,6 +52,7 @@ class BorrowersController extends Controller
         borrower::create([
             'name' => $request -> name,
             'surname' => $request -> surname,
+            'email' => $request -> email,
             
         ]);
 
@@ -77,7 +78,10 @@ class BorrowersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $borrower = Borrower::FindOrFail($id);
+
+
+       return view('edit', compact('borrower'));
     }
 
     /**

@@ -28,7 +28,14 @@
                                 <input id="autor" type="text" class="form-control" name="surname">
                             </div>
                         </div>
+                        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Email</label>
 
+                            <div class="col-md-6">
+                                <input id="autor" type="text" class="form-control" name="email">
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

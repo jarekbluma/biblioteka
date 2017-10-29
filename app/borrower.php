@@ -15,7 +15,7 @@ class borrower extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'surname',
+        'name', 'surname', 'email',
     ];
 
     

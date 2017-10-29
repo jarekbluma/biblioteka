@@ -44,7 +44,7 @@
                                                   <td>{{ $book->rok }}</td>
                                                   <td>{{ $book->dateofborrow }}</td>
                                                   <td>{{ $book->dateofreturn }}</td>
-                                                  <td></td>
+                                                  <td>{{ $book->borrower }}</td>
                                                   <td><a class="btn btn-primary" href="{{ url('/edit/' . $book->id) }}">Edytuj</a></td>
                                                 </tr>
                                               </tbody>                                           

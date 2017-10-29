@@ -5,8 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
+                
                 <div class="panel-heading">Edycja
-                    <a class="btn btn-primary" href="{{ url('/home') }}">Powrót</a>
+                    
+                        <a class="btn btn-primary" href="{{ url('/home') }}">Powrót</a>
+                    
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ url('/books/' . $edit -> id)}}">
@@ -45,6 +48,7 @@
                                 <input id="rok" type="text" class="form-control" name="rok" value="{{ $edit -> rok }}">
                             </div>
                         </div>
+                     
 
                         <div class="form-group">
                             <label  class="col-md-4 control-label">Data wypożyczenia</label>
@@ -61,14 +65,37 @@
                                 <input id="rok" type="date" class="form-control" name="dateofreturn" value="{{ $edit -> dateofreturn }}" readonly>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label  class="col-md-4 control-label">Pożyczający</label>
+
+                            <div class="col-md-6">
+                                <input id="rok" type="text" class="form-control" name="borrower" value="{{ $edit -> borrower }}">
+                            </div>
+                        </div>
+
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Zapisz
                                 </button>
-                            </div>
-                        </div>
+                            </div> 
+                        </div>       
                     </form>
+                            <form class="form-horizontal" method="POST" action="{{ url('/books/' . $edit -> id)}}">
+                                {{ csrf_field() }}
+                                {{ method_field('delete')}}
+                                
+                                 
+                                    <div class="col-md-1 col-md-offset-10">
+                                        <button type="submit" class="btn btn-danger">
+                                            Usuń z bazy
+                                        </button>
+                                    </div>
+                            </form> 
+                         
+                    </div>  
                 </div>
             </div>
         </div>
