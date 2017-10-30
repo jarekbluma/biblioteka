@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
                 <div class="panel-heading">Biblioteka
                           
@@ -31,6 +31,7 @@
                                                 <th>Data oddania</th>
                                                 <th>Pożyczający</th>
                                                 <th>Edycja</th>
+                                                <th>Email</th>
                                               </tr>
                                             </thead>
                                 </div>            
@@ -46,6 +47,7 @@
                                                   <td>{{ $book->dateofreturn }}</td>
                                                   <td>{{ $book->borrower }}</td>
                                                   <td><a class="btn btn-primary" href="{{ url('/edit/' . $book->id) }}">Edytuj</a></td>
+                                                  <td><a class="btn btn-success" href="{{ url('/edit/' . $book->id) }}">Email</a></td>
                                                 </tr>
                                               </tbody>                                           
                                       </div>      

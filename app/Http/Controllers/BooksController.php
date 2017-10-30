@@ -112,7 +112,7 @@ class BooksController extends Controller
         $book -> borrower = $request -> borrower;      
         $book -> save();
       
-        return back();
+        return redirect()->action('HomeController@index');
     
     }
 
