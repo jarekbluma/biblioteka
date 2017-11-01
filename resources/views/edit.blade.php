@@ -77,7 +77,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" onclick="return confirm('Czy chcesz zapisać?')">
                                     Zapisz
                                 </button>
                             </div> 
@@ -89,7 +89,7 @@
                                 
                                  
                                     <div class="col-md-1 col-md-offset-10">
-                                        <button type="submit" class="btn btn-danger">
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Czy chcesz usunąć?')">
                                             Usuń z bazy
                                         </button>
                                     </div>

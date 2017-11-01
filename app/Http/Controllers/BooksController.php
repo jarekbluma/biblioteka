@@ -108,7 +108,16 @@ class BooksController extends Controller
         $book -> wydawnictwo = $request -> wydawnictwo;
         $book -> rok = $request -> rok;
         $book -> dateofborrow = $request -> dateofborrow;
-        $book -> dateofreturn = Carbon::now()->addMonths(1);
+
+            if(!empty($request -> dateofborrow))
+            {
+                $book -> dateofreturn = Carbon::now()->addMonths(1);
+            }  
+            else
+            {
+                $book -> dateofreturn = 'W bibliotece.';
+            }  
+
         $book -> borrower = $request -> borrower;      
         $book -> save();
       
