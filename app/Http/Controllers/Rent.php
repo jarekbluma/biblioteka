@@ -37,7 +37,7 @@ class Rent extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "rent controller: store";
     }
 
     /**

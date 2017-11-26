@@ -9,7 +9,7 @@
                     <a class="btn btn-primary" href="{{ url('/home') }}">Powrót</a>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('/borrowers/')}}">
+                    <form class="form-horizontal" method="POST" action="{{ url('/rent/')}}">
                         {{ csrf_field() }}
                         
 
@@ -33,7 +33,7 @@
                             <label class="col-md-4 control-label">Data wypożyczenia</label>
 
                             <div class="col-md-6">
-                                <input id="autor" type="text" class="form-control" name="email">
+                                <input id="autor" type="text" class="form-control" name="email" value="{{ $rent -> dateofborrow }}">
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@
                             <label class="col-md-4 control-label">Data zwrotu</label>
 
                             <div class="col-md-6">
-                                <input id="autor" type="text" class="form-control" name="email">
+                                <input id="autor" type="text" class="form-control" name="email" value="{{ $rent -> dateofreturn }}" readonly>
                             </div>
                         </div>
 

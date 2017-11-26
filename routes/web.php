@@ -24,6 +24,8 @@ Route::get('/edit/{id}', 'BooksController@edit');
 Route::get('/rent/{id}', 'Rent@index');
 
 
+Route::resource('/rent', 'Rent');
+
 Route::resource('/books', 'BooksController');
 
 Route::resource('/borrowers', 'BorrowersController');
