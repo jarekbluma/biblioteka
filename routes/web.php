@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/edit/{id}', 'BooksController@edit');
 
+Route::get('/rent/{id}', 'Rent@index');
 
 
 Route::resource('/books', 'BooksController');

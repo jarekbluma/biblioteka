@@ -32,6 +32,7 @@
                                                 <th>Pożyczający</th>
                                                 <th>Edycja</th>
                                                 <th>Email</th>
+                                                <th>Wypożyczenie</th>
                                               </tr>
                                             </thead>
                                 </div>            
@@ -48,6 +49,7 @@
                                                   <td>{{ $book->borrower }}</td>
                                                   <td><a class="btn btn-primary" href="{{ url('/edit/' . $book->id) }}">Edytuj</a></td>
                                                   <td><a class="btn btn-success" href="{{ url('/edit/' . $book->id) }}">Email</a></td>
+                                                  <td><a class="btn btn-primary" href="{{ url('/rent/' . $book->id) }}">Wypożycz</a></td>
                                                 </tr>
                                               </tbody>                                           
                                       </div>      
