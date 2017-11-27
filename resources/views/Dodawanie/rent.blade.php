@@ -17,7 +17,7 @@
                             <label class="col-md-4 control-label">Książka</label>
 
                             <div class="col-md-6">
-                                <input id="tytul" type="text" class="form-control" name="name" value="{{ $rent -> tytul }}" required>
+                                <input id="tytul" type="text" class="form-control" name="tytul" value="{{ $rent -> tytul }}" required>
                             </div>
                         </div>
 
@@ -26,6 +26,7 @@
 
                             <div class="col-md-6">
                                 <input id="autor" type="text" class="form-control" name="surname">
+                                <a class="btn btn-primary" href="{{ url('/addrenter/') }}">Wybierz</a>
                             </div>
                         </div>
                         
@@ -33,7 +34,7 @@
                             <label class="col-md-4 control-label">Data wypożyczenia</label>
 
                             <div class="col-md-6">
-                                <input id="autor" type="text" class="form-control" name="email" value="{{ $rent -> dateofborrow }}">
+                                <input id="autor" type="date" class="form-control" name="date" value="{{ $rent -> dateofborrow }}">
                             </div>
                         </div>
 
@@ -41,7 +42,7 @@
                             <label class="col-md-4 control-label">Data zwrotu</label>
 
                             <div class="col-md-6">
-                                <input id="autor" type="text" class="form-control" name="email" value="{{ $rent -> dateofreturn }}" readonly>
+                                <input id="autor" type="text" class="form-control" name="return" value="{{ $rent -> dateofreturn }}" readonly>
                             </div>
                         </div>
 

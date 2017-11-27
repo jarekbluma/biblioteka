@@ -35,7 +35,7 @@ class Rent extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request)   //POST METHOD
     {
         return "rent controller: store";
     }

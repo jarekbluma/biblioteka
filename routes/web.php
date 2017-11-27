@@ -28,4 +28,6 @@ Route::resource('/rent', 'Rent');
 
 Route::resource('/books', 'BooksController');
 
+Route::get('/addrenter', 'BorrowersController@show');
+
 Route::resource('/borrowers', 'BorrowersController');
